@@ -54,9 +54,10 @@ When you visit the LinkedIn homepage, you'll see a blue notification in the top-
 ## Files
 
 - `manifest.json` - Extension configuration
-- `content.js` - JavaScript to hide feed elements dynamically
+- `content.js` - JavaScript to hide feed elements dynamically (with debug logging)
 - `hide-feed.css` - CSS rules to hide the feed
-- `icon*.png` - Extension icons
+- `TROUBLESHOOTING.md` - Detailed troubleshooting guide
+- `ICONS.md` - Instructions for adding extension icons
 
 ## Technical Details
 
@@ -76,10 +77,19 @@ This extension:
 
 ## Troubleshooting
 
+### Quick Fixes
+
 If the feed still appears:
-1. Try refreshing the LinkedIn page
-2. Make sure the extension is enabled in `chrome://extensions/`
-3. Clear your browser cache and reload
+1. **Reload the extension**: Go to `chrome://extensions/`, find LinkedIn Feed Hider, and click the reload icon
+2. **Refresh LinkedIn**: Hard refresh the page with `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+3. **Check it's enabled**: Make sure the extension toggle is ON in `chrome://extensions/`
+4. **View console logs**: Right-click → Inspect → Console tab, look for `[LinkedIn Feed Hider]` messages
+
+### Detailed Troubleshooting
+
+For step-by-step debugging instructions, see **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)**
+
+The extension includes console logging to help diagnose issues. Open Chrome DevTools (F12) and check the Console tab for debug messages.
 
 ## License
 

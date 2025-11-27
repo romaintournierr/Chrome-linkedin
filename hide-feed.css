@@ -1,27 +1,48 @@
-/* Hide the main feed container */
+/* ===== Hide LinkedIn Feed Elements ===== */
+
+/* Main feed container */
 .scaffold-layout__main {
   display: none !important;
+  visibility: hidden !important;
 }
 
-/* Hide the feed on the homepage */
+/* Main element that contains feed */
 main.scaffold-layout__main {
   display: none !important;
+  visibility: hidden !important;
 }
 
-/* Alternative selectors for feed containers */
-[class*="feed-shared-update-v2"],
+/* Feed update posts */
 .feed-shared-update-v2,
+[class*="feed-shared-update"],
+[data-id^="urn:li:activity"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Feed containers */
 .feed-container,
 .core-rail,
+.scaffold-finite-scroll,
 .scaffold-finite-scroll__content {
   display: none !important;
+  visibility: hidden !important;
 }
 
-/* Hide the "Start a post" box */
+/* Share/Post boxes */
 .share-box-feed-entry,
 .share-box-feed-entry__container,
+.share-box,
 .artdeco-card.share-box-feed-entry__trigger {
   display: none !important;
+  visibility: hidden !important;
+}
+
+/* Additional feed-related elements */
+div[class*="feed-shared"],
+div[class*="feed-container"] {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /* Keep navigation and other essential elements visible */
