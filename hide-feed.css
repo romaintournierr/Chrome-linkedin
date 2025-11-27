@@ -1,12 +1,21 @@
 /* ===== Hide LinkedIn Feed Elements ===== */
 
-/* Main feed container */
+/* Main feed container using data attributes (most reliable) */
+[data-component-type="LazyColumn"][componentkey="container-update-list_mainFeedContainer"],
+[data-component-type="LazyColumn"],
+[componentkey*="container-update-list"],
+[componentkey*="mainFeedContainer"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Legacy: Main feed container using class names */
 .scaffold-layout__main {
   display: none !important;
   visibility: hidden !important;
 }
 
-/* Main element that contains feed */
+/* Legacy: Main element that contains feed */
 main.scaffold-layout__main {
   display: none !important;
   visibility: hidden !important;
@@ -33,14 +42,17 @@ main.scaffold-layout__main {
 .share-box-feed-entry,
 .share-box-feed-entry__container,
 .share-box,
-.artdeco-card.share-box-feed-entry__trigger {
+.artdeco-card.share-box-feed-entry__trigger,
+[data-testid*="share-box"],
+[data-testid*="post-composer"] {
   display: none !important;
   visibility: hidden !important;
 }
 
 /* Additional feed-related elements */
 div[class*="feed-shared"],
-div[class*="feed-container"] {
+div[class*="feed-container"],
+[data-testid*="feed"] {
   display: none !important;
   visibility: hidden !important;
 }

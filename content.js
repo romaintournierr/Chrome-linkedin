@@ -67,17 +67,19 @@
   function hideFeed() {
     console.log('[LinkedIn Feed Hider] Running hideFeed()');
 
-    // More comprehensive feed selectors
+    // Use data attributes which are more stable than obfuscated class names
     const feedSelectors = [
-      // Main content area
+      // Main feed container (most important!)
+      '[data-component-type="LazyColumn"][componentkey="container-update-list_mainFeedContainer"]',
+      '[data-component-type="LazyColumn"]',
+      '[componentkey*="container-update-list"]',
+      '[componentkey*="mainFeedContainer"]',
+
+      // Legacy selectors (in case older structure exists)
       '.scaffold-layout__main',
       'main.scaffold-layout__main',
-
-      // Feed updates
       '.feed-shared-update-v2',
       '[data-id^="urn:li:activity"]',
-
-      // Feed containers
       '.feed-container',
       '.core-rail',
       '.scaffold-finite-scroll',
@@ -87,10 +89,12 @@
       '.share-box-feed-entry',
       '.share-box-feed-entry__container',
       '.share-box',
+      '[data-testid*="share-box"]',
+      '[data-testid*="post-composer"]',
 
-      // Additional feed elements
-      'div[class*="feed"]',
-      '.artdeco-card:has(.feed-shared-update-v2)'
+      // Additional feed elements with data attributes
+      'div[class*="feed-shared"]',
+      '[data-testid*="feed"]'
     ];
 
     let hiddenThisRun = 0;
