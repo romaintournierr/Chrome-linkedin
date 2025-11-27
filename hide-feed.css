@@ -1,0 +1,44 @@
+/* Hide the main feed container */
+.scaffold-layout__main {
+  display: none !important;
+}
+
+/* Hide the feed on the homepage */
+main.scaffold-layout__main {
+  display: none !important;
+}
+
+/* Alternative selectors for feed containers */
+[class*="feed-shared-update-v2"],
+.feed-shared-update-v2,
+.feed-container,
+.core-rail,
+.scaffold-finite-scroll__content {
+  display: none !important;
+}
+
+/* Hide the "Start a post" box */
+.share-box-feed-entry,
+.share-box-feed-entry__container,
+.artdeco-card.share-box-feed-entry__trigger {
+  display: none !important;
+}
+
+/* Keep navigation and other essential elements visible */
+.global-nav,
+.nav-bar,
+.msg-overlay-list-bubble,
+.msg-overlay-bubble-header,
+.messaging-container,
+.scaffold-layout__aside,
+.scaffold-layout__sidebar,
+header,
+nav {
+  display: block !important;
+}
+
+/* Ensure the messaging overlay remains visible */
+.msg-overlay-list-bubble,
+.msg-overlay-conversation-bubble {
+  display: flex !important;
+}

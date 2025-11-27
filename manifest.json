@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Feed Hider",
+  "version": "1.0.0",
+  "description": "Hides the LinkedIn feed while keeping the website fully functional",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "css": ["hide-feed.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

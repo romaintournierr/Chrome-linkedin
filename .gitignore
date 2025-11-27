@@ -1,0 +1,18 @@
+# Icon files (until ready to commit)
+icon*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Package files
+*.zip
+*.crx
+*.pem
