@@ -6,6 +6,7 @@ A Chrome extension that hides the LinkedIn feed while keeping the rest of the we
 
 - ✅ Hides the main LinkedIn feed
 - ✅ Hides the "Start a post" box
+- ✅ **Visual indicator** shows when the feed is hidden
 - ✅ Keeps navigation accessible
 - ✅ Keeps messaging functional
 - ✅ Keeps notifications working
@@ -44,6 +45,11 @@ A Chrome extension that hides the LinkedIn feed while keeping the rest of the we
 ### Usage
 
 Once installed, simply navigate to LinkedIn. The feed will be automatically hidden while all other features remain accessible.
+
+When you visit the LinkedIn homepage, you'll see a blue notification in the top-right corner confirming that the feed has been hidden. This indicator:
+- Appears for 5 seconds then automatically fades away
+- Can be manually dismissed by clicking the × button
+- Only appears on the feed page (not on profiles, jobs, etc.)
 
 ## Files
 
